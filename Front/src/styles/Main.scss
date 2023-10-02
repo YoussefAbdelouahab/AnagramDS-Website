@@ -1,7 +1,252 @@
-body {
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GilroyLight';
+    src: url('../fonts/GilroyLight.eot');
+    src: url('../fonts/GilroyLight.eot') format('embedded-opentype'),
+        url('../fonts/GilroyLight.woff2') format('woff2'),
+        url('../fonts/GilroyLight.woff') format('woff'),
+        url('../fonts/GilroyLight.ttf') format('truetype'),
+        url('../fonts/GilroyLight.svg#GilroyLight') format('svg');
+}
+
+@font-face {
+    font-family: 'GilroySemiBold';
+    src: url('../fonts/GilroySemiBold.eot');
+    src: url('../fonts/GilroySemiBold.eot') format('embedded-opentype'), url('../fonts/GilroySemiBold.woff2') format('woff2'), url('../fonts/GilroySemiBold.woff') format('woff'), url('../fonts/GilroySemiBold.ttf') format('truetype'), url('../fonts/GilroySemiBold.svg#GilroySemiBold') format('svg');
+}
+
+@font-face {
+    font-family: 'GilroyBold';
+    src: url('../fonts/GilroyBold.eot');
+    src: url('../fonts/GilroyBold.eot') format('embedded-opentype'),
+        url('../fonts/GilroyBold.woff2') format('woff2'),
+        url('../fonts/GilroyBold.woff') format('woff'),
+        url('../fonts/GilroyBold.ttf') format('truetype'),
+        url('../fonts/GilroyBold.svg#GilroyBold') format('svg');
+}
+
+@font-face {
+    font-family: 'GilroyExtraBold';
+    src: url('../fonts/GilroyExtraBold.eot');
+    src: url('../fonts/GilroyExtraBold.eot') format('embedded-opentype'), url('../fonts/GilroyExtraBold.woff2') format('woff2'), url('../fonts/GilroyExtraBold.woff') format('woff'), url('../fonts/GilroyExtraBold.ttf') format('truetype'), url('../fonts/GilroyExtraBold.svg#GilroyExtraBold') format('svg');
+}
+
+@font-face {
+    font-family: 'GraphikRegular';
+    src: url('../fonts/GraphikRegular.eot');
+    src: url('../fonts/GraphikRegular.eot') format('embedded-opentype'),
+        url('../fonts/GraphikRegular.woff2') format('woff2'),
+        url('../fonts/GraphikRegular.woff') format('woff'),
+        url('../fonts/GraphikRegular.ttf') format('truetype'),
+        url('../fonts/GraphikRegular.svg#GraphikRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'GraphikMedium';
+    src: url('../fonts/GraphikMedium.eot');
+    src: url('../fonts/GraphikMedium.eot') format('embedded-opentype'), url('../fonts/GraphikMedium.woff2') format('woff2'), url('../fonts/GraphikMedium.woff') format('woff'), url('../fonts/GraphikMedium.ttf') format('truetype'), url('../fonts/GraphikMedium.svg#GraphikMedium') format('svg');
+}
+
+@font-face {
+    font-family: 'GraphikSemibold';
+    src: url('../fonts/GraphikSemibold.eot');
+    src: url('../fonts/GraphikSemibold.eot') format('embedded-opentype'),
+        url('../fonts/GraphikSemibold.woff2') format('woff2'),
+        url('../fonts/GraphikSemibold.woff') format('woff'),
+        url('../fonts/GraphikSemibold.ttf') format('truetype'),
+        url('../fonts/GraphikSemibold.svg#GraphikSemibold') format('svg');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
     margin: 0;
     padding: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: black;
+    outline: none
+}
+
+
+
+ul,
+ol {
+    list-style: none;
+}
+
+button,
+input[type='submit'],
+input[type='reset'],
+a {
+    transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+
+::-moz-selection {
+    color: #ffd6e9;
+    background: #3399ff;
+}
+
+::selection {
+    color: #ffd6e9;
+    background: #3399ff;
+}
+
+::-moz-selection {
+    color: #ffd6e9;
+    background: #3399ff;
+}
+
+::-webkit-input-placeholder {
+    color: #e4e4e4;
+    font-size: 16px;
+}
+
+:-ms-input-placeholder {
+    color: #e4e4e4;
+    font-size: 16px;
+}
+
+::-ms-input-placeholder {
+    color: #e4e4e4;
+    font-size: 16px;
+}
+
+::placeholder {
+    color: #e4e4e4;
+    font-size: 16px;
+}
+
+::-webkit-input-placeholder {
+    color: #e4e4e4;
+    font-size: 16px;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #e4e4e4;
+    font-size: 16px;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #e4e4e4;
+    font-size: 16px;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #e4e4e4;
+    font-size: 16px;
+}
+
+::-moz-placeholder {
+    color: #e4e4e4;
+    font-size: 16px;
+}
+
+textarea::-webkit-input-placeholder {
+    color: #e4e4e4;
+    font-size: 16px;
+}
+
+textarea:-moz-placeholder {
+    /* Firefox 18- */
+    color: #e4e4e4;
+    font-size: 16px;
+}
+
+textarea::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #333333;
+}
+
+textarea:-ms-input-placeholder {
+    color: #e4e4e4;
+    font-size: 16px;
+}
+
+body {
+    font-weight: normal;
+    line-height: normal;
+    font-size: 18px;
+    font-family: 'GraphikRegular';
+    font-weight: 400;
+}
+
+*:focus {
+    outline: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+
+a {
+    color: #fff !important;
+    outline: none !important;
+    border: none;
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    vertical-align: middle;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: normal;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    border: none;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
