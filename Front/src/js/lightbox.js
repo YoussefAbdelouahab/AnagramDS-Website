@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-expressions*/
+/* eslint-disable no-undef*/
+/* eslint-disable no-restricted-globals*/
 /*!
  * Lightbox v2.11.2
  * by Lokesh Dhakar

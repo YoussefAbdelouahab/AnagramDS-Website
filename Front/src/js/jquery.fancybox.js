@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-expressions*/
+/* eslint-disable no-undef*/
+/* eslint-disable no-restricted-globals*/
 // ==================================================
 // fancyBox v3.5.7
 //
@@ -9,7 +12,7 @@
 //
 // ==================================================
 (function (window, document, $, undefined) {
-  "use strict";
+  
 
   window.console = window.console || {
     info: function (stuff) {}
@@ -3440,7 +3443,7 @@
 //
 // ==========================================================================
 (function ($) {
-  "use strict";
+  
 
   // Object containing properties for each media type
   var defaults = {
@@ -3730,7 +3733,7 @@
 //
 // ==========================================================================
 (function (window, document, $) {
-  "use strict";
+  
 
   var requestAFrame = (function () {
     return (
@@ -4656,7 +4659,7 @@
 //
 // ==========================================================================
 (function (document, $) {
-  "use strict";
+  
 
   $.extend(true, $.fancybox.defaults, {
     btnTpl: {
@@ -4858,7 +4861,7 @@
 //
 // ==========================================================================
 (function (document, $) {
-  "use strict";
+  
 
   // Collection of methods supported by user browser
   var fn = (function () {
@@ -5031,7 +5034,7 @@
 //
 // ==========================================================================
 (function (document, $) {
-  "use strict";
+  
 
   var CLASS = "fancybox-thumbs",
     CLASS_ACTIVE = CLASS + "-active";
@@ -5282,7 +5285,7 @@
 //
 // ==========================================================================
 (function (document, $) {
-  "use strict";
+  
 
   $.extend(true, $.fancybox.defaults, {
     btnTpl: {
@@ -5386,7 +5389,7 @@
 //
 // ==========================================================================
 (function (window, document, $) {
-  "use strict";
+  
 
   // Simple $.escapeSelector polyfill (for jQuery prior v3)
   if (!$.escapeSelector) {
@@ -5596,7 +5599,7 @@
 //
 // ==========================================================================
 (function (document, $) {
-  "use strict";
+  
 
   var prevTime = new Date().getTime();
 

@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-expressions*/
+/* eslint-disable no-undef*/
+/* eslint-disable no-restricted-globals*/
 /*
      _ _      _       _
  ___| (_) ___| | __  (_)___
@@ -16,7 +19,7 @@
  */
 /* global window, document, define, jQuery, setInterval, clearInterval */
 ;(function(factory) {
-    'use strict';
+    
     if (typeof define === 'function' && define.amd) {
         define(['jquery'], factory);
     } else if (typeof exports !== 'undefined') {
@@ -26,7 +29,7 @@
     }
 
 }(function($) {
-    'use strict';
+    
     var Slick = window.Slick || {};
 
     Slick = (function() {

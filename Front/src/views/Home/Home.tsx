@@ -56,8 +56,11 @@ import trust3 from "../../assets/trust3.png"
 import trust4 from "../../assets/trust4.png"
 import trust5 from "../../assets/trust5.jpg"
 import { Helmet } from "react-helmet";
+import "../../js/wow.min.js"
+import "../../js/slick.js"
+import "../../js/woco.accordion.min.js"
 import "../../js/swiper.js"
-
+import "../../js/custom.js"
 function Home() {
 
   return (
@@ -67,7 +70,7 @@ function Home() {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
       </Helmet>
-      
+
       <header>
         <Navbar />
       </header>

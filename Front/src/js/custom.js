@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-expressions*/
+/* eslint-disable no-undef*/
+/* eslint-disable no-restricted-globals*/
 !!window['addEventListener'] && new WOW().init();
 
 $(document).ready(function($) {

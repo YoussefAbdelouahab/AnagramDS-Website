@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-expressions*/
+/* eslint-disable no-undef*/
+/* eslint-disable no-restricted-globals*/
 // Easy Responsive Tabs Plugin
 (function ($) {
     $.fn.extend({
