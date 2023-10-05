@@ -55,22 +55,20 @@ import trust2 from "../../assets/trust2.jpeg"
 import trust3 from "../../assets/trust3.png"
 import trust4 from "../../assets/trust4.png"
 import trust5 from "../../assets/trust5.jpg"
-import { Helmet } from "react-helmet";
-import "../../js/wow.min.js"
-import "../../js/slick.js"
-import "../../js/woco.accordion.min.js"
-import "../../js/swiper.js"
-import "../../js/custom.js"
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, Autoplay } from 'swiper/modules';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
 function Home() {
 
   return (
     <>
-      <Helmet>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-      </Helmet>
-
       <header>
         <Navbar />
       </header>
@@ -629,27 +627,23 @@ function Home() {
           <div className="mngnt_slider_otr">
             <div className="mngmnt_slider swiper-container">
               <div className="swiper-wrapper">
-                <div className="swiper-slide">
-                  <div className="mngnt_slider_inn">
-                    <div className="immg_mng_inn">
-                      <img src={project3_3} alt="" />
-                    </div>
-                  </div>
-                </div>
-                <div className="swiper-slide">
-                  <div className="mngnt_slider_inn">
-                    <div className="immg_mng_inn">
-                      <img src={project_none} alt="" />
-                    </div>
-                  </div>
-                </div>
-                <div className="swiper-slide">
-                  <div className="mngnt_slider_inn">
-                    <div className="immg_mng_inn">
-                      <img src={project_none} alt="" />
-                    </div>
-                  </div>
-                </div>
+                <Swiper
+                  modules={[Navigation, Scrollbar, Pagination]}
+                  grabCursor={true}
+                  spaceBetween={0}
+                  slidesPerView={3}
+                  centeredSlides={true}
+                  initialSlide={1}
+                  navigation
+                  pagination={{ clickable: true }}
+                  scrollbar={{ draggable: true }}
+                  onSwiper={(swiper) => console.log(swiper)}
+                  onSlideChange={() => console.log('slide change')}
+                >
+                  <SwiperSlide><a href="/contact"><img src={project_none} alt="" /></a></SwiperSlide>
+                  <SwiperSlide><a href="/contact"><img src={project3_3} alt="" /></a></SwiperSlide>
+                  <SwiperSlide className="last_phone"><a href="/contact"><img src={project_none} alt="" /></a></SwiperSlide>
+                </Swiper>
               </div>
             </div>
             {/* Add Arrows */}
@@ -663,7 +657,6 @@ function Home() {
                 <i className="fa fa-long-arrow-left" aria-hidden="true" />
               </div>
             </div>
-            <div id="numberSlides">0/0</div>
             <div className="see_pro">
               <a href="javascript:void(0);" className="redbtn">
                 SEE OTHER PROJECTS
@@ -680,41 +673,25 @@ function Home() {
             <div className="trust_logo">
               <div className="prtnr_sldr_otr swiper-container">
                 <div className="swiper-wrapper">
-                  <div className="swiper-slide">
-                    <div className="prod_otr_bk ">
-                      <div className="prd_img">
-                        <img src={trust1} alt="" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="prod_otr_bk ">
-                      <div className="prd_img">
-                        <img src={trust2} alt="" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="prod_otr_bk ">
-                      <div className="prd_img">
-                        <img src={trust3} alt="" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="prod_otr_bk ">
-                      <div className="prd_img">
-                        <img src={trust4} alt="" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="prod_otr_bk ">
-                      <div className="prd_img">
-                        <img src={trust5} alt="" />
-                      </div>
-                    </div>
-                  </div>
+                <Swiper
+                  modules={[Navigation, Scrollbar, Pagination, Autoplay]}
+                  grabCursor={true}
+                  spaceBetween={0}
+                  slidesPerView={3}
+                  centeredSlides={true}
+                  autoplay={{
+                    delay: 1000,
+                    disableOnInteraction: false,
+                  }}
+                  onSwiper={(swiper) => console.log(swiper)}
+                  onSlideChange={() => console.log('slide change')}
+                >
+                  <SwiperSlide><a href="/contact"><img src={trust1} alt="" /></a></SwiperSlide>
+                  <SwiperSlide><a href="/contact"><img src={trust2} alt="" /></a></SwiperSlide>
+                  <SwiperSlide><a href="/contact"><img src={trust3} alt="" /></a></SwiperSlide>
+                  <SwiperSlide><a href="/contact"><img src={trust4} alt="" /></a></SwiperSlide>
+                  <SwiperSlide><a href="/contact"><img src={trust5} alt="" /></a></SwiperSlide>
+                </Swiper>
                 </div>
               </div>
             </div>

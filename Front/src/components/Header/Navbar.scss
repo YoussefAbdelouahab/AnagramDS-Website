@@ -87,8 +87,9 @@
   
   .redbtn:hover {
     background: #fff;
-    color: #dc2430;
+    color: #dc2430 !important;
     box-shadow: 10px 3px 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
   }
   
   .custom_nav a,
