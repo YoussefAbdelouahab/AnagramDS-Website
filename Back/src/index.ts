@@ -5,7 +5,6 @@ import * as logger from 'morgan';
 import mongoose from "mongoose"
 import * as cors from 'cors';
 import {router} from "./router/router" 
-import { CheckAuth } from './middleware/auth';
 
 const PORT: number = 8000;
 const MONGO_URL = "mongodb+srv://abdelo:abdelo@cluster0.2vwraec.mongodb.net/";
@@ -19,7 +18,6 @@ app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(session({ secret: "secret", saveUninitialized: false, resave: false }));
-app.use(CheckAuth);
 
 app.use('/api', router)
 

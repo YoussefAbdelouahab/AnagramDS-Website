@@ -2,12 +2,13 @@ import * as express from 'express';
 import { UserModel } from '../entity/User';
 import * as bcrypt from "bcrypt";
 import * as jwt from "jsonwebtoken";
+import { CheckAuth } from '../middleware/auth';
 
 const router = express.Router();
 
 
 
-router.get('/users', async (req, res) => {
+router.get('/users', CheckAuth, async (req, res) => {
     try {
         const data = await UserModel.find({})
         console.log("Users retrieved")
@@ -17,7 +18,7 @@ router.get('/users', async (req, res) => {
     }
 })
 
-router.post('/user', async (req, res) => {
+router.post('/user', CheckAuth, async (req, res) => {
     try {
         //Hash the password
         const hash = await bcrypt.hash(req.body.password, 10);
@@ -50,7 +51,7 @@ router.post('/login', async (req, res) => {
         });
         if (!req.session.token) res.status(401).json({ "KO": "Error authentication" });
         
-        res.status(200).json("Account logged in");
+        res.status(200).json("Account logged in" + req.session.token);
     } catch (error) {
         console.log('Error occured during the connexion:' + error);
     }
