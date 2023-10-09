@@ -1,0 +1,58 @@
+footer {
+    margin-top: 0 !important;
+}
+
+.portal_section {
+    width: 100%;
+    display: flex;
+
+    .portal_section_right {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+        padding-right: 5%;
+        padding-left: 5%;
+
+        .portal_card {
+            display: flex;
+            gap: 30px;
+
+            .card {
+                width: 100%;
+                border-radius: 25px;
+                box-shadow: 8px 8px 34px 0px rgba(0, 0, 0, 0.25);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border: none;
+                outline: none;
+                gap: 20px;
+                img{
+                    width: 15%;
+                }
+                h2{
+                    color: #FFF;
+                    font-size: 64px;
+                    text-align: center;
+                }
+                h3{
+                    color: #FFF;
+                    text-align: center;
+                }
+            }
+            .RedCard{
+                background: #FFB9B9;
+            }
+            .YellowCard{
+                background: #FFEBB9;
+            }
+            .BlueCard{
+                background: #B9E6FF;
+            }
+        }
+    }
+}

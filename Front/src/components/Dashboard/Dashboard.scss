@@ -1,0 +1,71 @@
+.dashboard_container {
+    width: 25%;
+    height: 1000px;
+    background-color: black;
+    color: white;
+
+    .list_container {
+        position: relative;
+
+        .SEO{
+            padding-top: 30%;
+            padding-right: 20%;
+            padding-left: 20%;
+            border-bottom: 1px solid white;
+        }
+        .Cybersécurité{
+            padding-right: 20%;
+            padding-left: 20%;
+            border-bottom: 1px solid white;
+        }
+        .Sécurité{
+            padding-right: 20%;
+            padding-left: 20%;
+            margin-bottom: 20%;
+        }
+
+        ul {
+
+            img {
+                position: absolute;
+                left: 7%;
+                width: 7%;
+                transform: translateY(10px);
+            }
+
+            h2 {
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 600;
+            }
+
+            li {
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                margin: 10% 0;
+            }
+
+            li::before {
+                content: url('../../assets/DashboardArrow.svg');
+                /* with class ModalCarrot ??*/
+                position: relative;
+                /*or absolute*/
+                z-index: 100000;
+                /*a number that's more than the modal box*/
+                left: -50px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .dashboard_container {
+        .list_container {
+            .SEO{
+                padding-top: 50%;
+                
+            }
+        }
+    }
+}
