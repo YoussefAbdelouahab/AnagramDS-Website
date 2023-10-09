@@ -43,15 +43,20 @@ router.post('/login', async (req, res) => {
         const isValid = await bcrypt.compare(req.body.password, user.password);
         if (!isValid) if (!user) res.status(401).json({ "KO": "Password inccorect, please retry" });
 
-        req.session.token = jwt.sign({
-            id: user.id,
-            username: user.username,
-        }, "bc042227-9f88-414d", {
-            expiresIn: "24h"
-        });
-        if (!req.session.token) res.status(401).json({ "KO": "Error authentication" });
+        const token = jwt.sign(
+            {
+              id: user.id,
+              username: user.username
+            },
+            "bc042227-9f88-414d",
+            {
+              expiresIn: "24h",
+            }
+          );
+
+        if (!token) res.status(401).json({ "KO": "Error authentication" });
         
-        res.status(200).json("Account logged in" + req.session.token);
+        res.status(200).json({message: "Account logged in", token: token});
     } catch (error) {
         console.log('Error occured during the connexion:' + error);
     }
