@@ -4,6 +4,9 @@ import '../../styles/animate.css'
 import '../../styles/woco-accordion.min.css'
 import '../../styles/swiper.css'
 import '../../styles/responsive.css'
+import '../../styles/easy-responsive-tabs.css'
+import '../../styles/font-awesome.css'
+import "../../styles/jquery.fancybox.css"
 import './Home.scss';
 
 
@@ -673,25 +676,25 @@ function Home() {
             <div className="trust_logo">
               <div className="prtnr_sldr_otr swiper-container">
                 <div className="swiper-wrapper">
-                <Swiper
-                  modules={[Navigation, Scrollbar, Pagination, Autoplay]}
-                  grabCursor={true}
-                  spaceBetween={0}
-                  slidesPerView={3}
-                  centeredSlides={true}
-                  autoplay={{
-                    delay: 1000,
-                    disableOnInteraction: false,
-                  }}
-                  onSwiper={(swiper) => console.log(swiper)}
-                  onSlideChange={() => console.log('slide change')}
-                >
-                  <SwiperSlide><a href="/contact"><img src={trust1} alt="" /></a></SwiperSlide>
-                  <SwiperSlide><a href="/contact"><img src={trust2} alt="" /></a></SwiperSlide>
-                  <SwiperSlide><a href="/contact"><img src={trust3} alt="" /></a></SwiperSlide>
-                  <SwiperSlide><a href="/contact"><img src={trust4} alt="" /></a></SwiperSlide>
-                  <SwiperSlide><a href="/contact"><img src={trust5} alt="" /></a></SwiperSlide>
-                </Swiper>
+                  <Swiper
+                    modules={[Navigation, Scrollbar, Pagination, Autoplay]}
+                    grabCursor={true}
+                    spaceBetween={0}
+                    slidesPerView={3}
+                    centeredSlides={true}
+                    autoplay={{
+                      delay: 1000,
+                      disableOnInteraction: false,
+                    }}
+                    onSwiper={(swiper) => console.log(swiper)}
+                    onSlideChange={() => console.log('slide change')}
+                  >
+                    <SwiperSlide><a href="/contact"><img src={trust1} alt="" /></a></SwiperSlide>
+                    <SwiperSlide><a href="/contact"><img src={trust2} alt="" /></a></SwiperSlide>
+                    <SwiperSlide><a href="/contact"><img src={trust3} alt="" /></a></SwiperSlide>
+                    <SwiperSlide><a href="/contact"><img src={trust4} alt="" /></a></SwiperSlide>
+                    <SwiperSlide><a href="/contact"><img src={trust5} alt="" /></a></SwiperSlide>
+                  </Swiper>
                 </div>
               </div>
             </div>

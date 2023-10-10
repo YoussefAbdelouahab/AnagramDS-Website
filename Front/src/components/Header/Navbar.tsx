@@ -1,4 +1,13 @@
 import "./Navbar.scss"
+import '../../styles/Bootstrap.css'
+import '../../styles/slick.css'
+import '../../styles/animate.css'
+import '../../styles/woco-accordion.min.css'
+import '../../styles/swiper.css'
+import '../../styles/responsive.css'
+import '../../styles/easy-responsive-tabs.css'
+import '../../styles/font-awesome.css'
+import "../../styles/jquery.fancybox.css"
 import Logo from "../../assets/logo.png"
 export default function Navbar() {
     return (
@@ -7,7 +16,7 @@ export default function Navbar() {
                 <div className="navarea">
                     <div className="log_outer">
                         <div className="top_logo">
-                            <a href="index.html">
+                            <a href="/">
                                 <img src={Logo} alt="" />
                             </a>
                         </div>
@@ -32,16 +41,16 @@ export default function Navbar() {
                                             <a href="#">Services</a>
                                         </li>
                                         <li>
-                                            <a href="a-propos.html">About Us</a>
+                                            <a href="/about">About Us</a>
                                         </li>
                                         <li>
-                                            <a href="devis-gratuit.html">Free Quote</a>
+                                            <a href="/freequote">Free Quote</a>
                                         </li>
                                         <li>
-                                            <a href="offers-demploi.html">Jobs</a>
+                                            <a href="/jobs">Jobs</a>
                                         </li>
                                         <li>
-                                            <a href="assistance.html">Assistance</a>
+                                            <a href="/help">Assistance</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -49,7 +58,7 @@ export default function Navbar() {
                         </div>
                         <div className="login_contact">
                             <div className="contact">
-                                <a href="contact.html" className="redbtn">
+                                <a href="/contact" className="redbtn">
                                     Contact Us
                                 </a>
                             </div>
