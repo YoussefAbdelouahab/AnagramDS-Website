@@ -5,6 +5,8 @@ import FreeQuote from "./views/FreeQuote/FreeQuote";
 import Jobs from "./views/Jobs/Jobs";
 import Help from "./views/Help/Help";
 import Contact from "./views/Contact/Contact";
+import Portal from "./views/Portal/Portal";
+import Login from "./views/Login/Login";
 export default function Router() {
     return (
         <>
@@ -15,6 +17,8 @@ export default function Router() {
                 <Route path="/jobs" element={<Jobs />} />
                 <Route path="/help" element={<Help />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/portail" element={<Portal />} />
+                <Route path="/login" element={<Login />} />
             </Routes>
         </>
     );

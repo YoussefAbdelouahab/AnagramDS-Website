@@ -16,7 +16,7 @@ import BlueCard from "../../assets/BlueCard.png"
 function Portal() {
 
   return (
-    <>
+    <div className='portail_page'>
       <header>
         <PortalNavbar />
       </header>
@@ -49,7 +49,7 @@ function Portal() {
 
       <Footer />
 
-    </>
+    </div>
   );
 }
 
