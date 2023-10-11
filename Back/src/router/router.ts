@@ -18,7 +18,7 @@ router.get('/users', CheckAuth, async (req, res) => {
     }
 })
 
-router.post('/user', CheckAuth, async (req, res) => {
+router.post('/user', async (req, res) => {
     try {
         //Hash the password
         const hash = await bcrypt.hash(req.body.password, 10);
@@ -38,11 +38,10 @@ router.post('/login', async (req, res) => {
         //Check if user exist
         const user = await UserModel.findOne({ email: req.body.email });
         if (!user) res.status(401).json({ "KO": "Email not found, please register" });
-
         // check if password conform
         const isValid = await bcrypt.compare(req.body.password, user.password);
-        if (!isValid) if (!user) res.status(401).json({ "KO": "Password inccorect, please retry" });
-
+        if (!isValid) res.status(401).json({ "KO": "Password inccorect, please retry" });
+        console.log(isValid)
         const token = jwt.sign(
             {
               id: user.id,
