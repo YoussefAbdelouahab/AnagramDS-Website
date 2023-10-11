@@ -1,4 +1,13 @@
 import "./Footer.scss"
+import '../../styles/Bootstrap.css'
+import '../../styles/slick.css'
+import '../../styles/animate.css'
+import '../../styles/woco-accordion.min.css'
+import '../../styles/swiper.css'
+import '../../styles/responsive.css'
+import '../../styles/easy-responsive-tabs.css'
+import '../../styles/font-awesome.css'
+import "../../styles/jquery.fancybox.css"
 import Logo from "../../assets/logo.png"
 
 
@@ -122,7 +131,7 @@ export default function Footer() {
                         <div className="footer_bottom">
                             <div className="copyright">
                                 © 2022 <a href="">Anagram DS.</a> All Rights Reserved.{" "}
-                                <a href="https://mfoumgroup.com" target="_blank">
+                                <a href="https://mfoumgroup.com" target="_blank" rel="noreferrer">
                                     Power by Mfoum group SARL
                                 </a>
                             </div>
