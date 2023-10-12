@@ -15,8 +15,8 @@ app.use(logger('dev'));
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(session({ secret: "secret", saveUninitialized: false, resave: false }));
 
 app.use('/api', router)
