@@ -6,8 +6,6 @@ import { CheckAuth } from '../middleware/auth';
 
 const router = express.Router();
 
-
-
 router.get('/users', CheckAuth, async (req, res) => {
     try {
         const data = await UserModel.find({})
@@ -60,6 +58,5 @@ router.post('/login', async (req, res) => {
         console.log('Error occured during the connexion:' + error);
     }
 })
-
 
 export { router }
