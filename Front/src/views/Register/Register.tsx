@@ -4,7 +4,7 @@ import '../../styles/animate.css'
 import '../../styles/woco-accordion.min.css'
 import '../../styles/swiper.css'
 import '../../styles/responsive.css'
-import './Login.scss';
+import './Register.scss';
 
 import Navbar from "../../components/Header/Navbar"
 import Footer from "../../components/Footer/Footer"
@@ -18,53 +18,31 @@ import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import axios from "axios";
 
 
-function Login() {
+function Register() {
   const navigate = useNavigate();
-
-  function AlertError(props) {
-    const { showAlertError, text } = props;
-    return (
-      <div className={`alert alert-danger ${showAlertError ? "d-block" : "d-none"}`} role="alert">
-        {text}
-      </div>
-    )
-  }
-
-  const [showAlertError, setShowAlertError] = useState(false);
-  const handleShowAlertError = () => {
-    setShowAlertError(true);
-  };
-
   const [user, setUser] = useState({
     email: "",
-    password: ""
+    password: "",
+    username: ""
   })
   const [showPassword, setShowPassword] = useState(false);
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
-  const formComplet = user.email && user.password;
+  const formComplet = user.email && user.password && user.username;
 
-  function handleLogin(e) {
+  function hanldeRegister(e) {
     e.preventDefault();
 
-    axios.post(`http://localhost:8000/api/login`, { email: user.email.trim(), password: user.password.trim() })
+    axios.post(`http://localhost:8000/api/user`, { email: user.email.trim(), password: user.password.trim(), username: user.username.trim() })
       .then(function (response) {
         if (response.status === 200) {
-
-          if (showAlertError === true) {
-            setShowAlertError(false);
-          }
-
-          localStorage.setItem("token", response.data.token);
-          navigate("/portail")
+          navigate("/login")
         }
       })
       .catch(function (error) {
-        handleShowAlertError()
         console.log(error);
       });
   }
-
 
   return (
     <>
@@ -72,14 +50,19 @@ function Login() {
         <Navbar />
       </header>
       <div className='login_container'>
-        <form onSubmit={handleLogin}>
-          <h1 className="text-center">Connexion</h1>
-          <AlertError showAlertError={showAlertError} text={"Identifiant ou mot de passe incorrect"} />
+        <form onSubmit={hanldeRegister}>
+          <h1 className="text-center">Inscription</h1>  
 
           <div className="">
             <input type="text" className="form-control" id="email" placeholder="Email"
               value={user.email}
               onChange={e => setUser({ ...user, email: e.target.value })} required />
+          </div>
+
+          <div className="">
+            <input type="text" className="form-control" id="email" placeholder="Nom de compte"
+              value={user.username}
+              onChange={e => setUser({ ...user, username: e.target.value })} required />
           </div>
 
           <div className="password_div">
@@ -92,10 +75,11 @@ function Login() {
             <span className="" id="icon-eye" onClick={handleClickShowPassword}>
               {showPassword ? <FontAwesomeIcon icon={faEyeSlash} /> : <FontAwesomeIcon icon={faEye} />}</span>
           </div>
-          <button type="submit" className="btn btn-submit px-4 py-2" disabled={!formComplet}>Se connecter</button>
-          <Link className="link-register" to={"/register"}>Vous n'avez pas de compte ?</Link>
+
+
+          <button type="submit" className="btn btn-submit px-4 py-2" disabled={!formComplet}>S'inscrire</button>
+
         </form>
-        
       </div>
 
       <Footer />
@@ -103,4 +87,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;

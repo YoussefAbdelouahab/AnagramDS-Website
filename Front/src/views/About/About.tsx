@@ -21,7 +21,39 @@ import m3 from "../../assets/m3.png"
 import crnr from "../../assets/crnr.png"
 import cl1 from "../../assets/cl-1.png"
 
+
+import { useEffect } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, Autoplay } from 'swiper/modules';
+
 function About() {
+
+    useEffect(() => {
+        var items = document.querySelectorAll("li");
+
+        function isItemInView(item) {
+            var rect = item.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function callbackFunc() {
+            for (var i = 0; i < items.length; i++) {
+                if (isItemInView(items[i])) {
+                    items[i].classList.add("show");
+                }
+            }
+        }
+
+        // listen for events
+        window.addEventListener("load", callbackFunc);
+        window.addEventListener("resize", callbackFunc);
+        window.addEventListener("scroll", callbackFunc);
+    }, []);
 
     return (
         <>
@@ -174,7 +206,7 @@ function About() {
                             <div className="fr-timeline">
                                 <div className="contact text-center">
                                     <a href="" className="redbtn">
-                                        #INIT &gt;
+                                        Comment tout à commencer
                                     </a>
                                 </div>
                                 <div>
@@ -307,56 +339,82 @@ function About() {
                     </div>
                     <div className="eqip_cbd_otr">
                         <div className="eqip_sldr_otr">
-                            <div className="eqip_otr_bk ">
-                                <div className="eqip_img">
-                                    {" "}
-                                    <img src={cl1} alt="" />{" "}
-                                </div>
-                                <div className="eqip_txt">
-                                    <h3>John Doe</h3>
-                                    <p>VP. Solution Architecture</p>
-                                </div>
-                            </div>
-                            <div className="eqip_otr_bk ">
-                                <div className="eqip_img">
-                                    {" "}
-                                    <img src={cl1} alt="" />{" "}
-                                </div>
-                                <div className="eqip_txt">
-                                    <h3>John Doe</h3>
-                                    <p>VP. Solution Architecture</p>
-                                </div>
-                            </div>
-                            <div className="eqip_otr_bk ">
-                                <div className="eqip_img">
-                                    {" "}
-                                    <img src={cl1} alt="" />{" "}
-                                </div>
-                                <div className="eqip_txt">
-                                    <h3>John Doe</h3>
-                                    <p>VP. Solution Architecture</p>
-                                </div>
-                            </div>
-                            <div className="eqip_otr_bk ">
-                                <div className="eqip_img">
-                                    {" "}
-                                    <img src={cl1} alt="" />{" "}
-                                </div>
-                                <div className="eqip_txt">
-                                    <h3>John Doe</h3>
-                                    <p>VP. Solution Architecture</p>
-                                </div>
-                            </div>
-                            <div className="eqip_otr_bk ">
-                                <div className="eqip_img">
-                                    {" "}
-                                    <img src={cl1} alt="" />{" "}
-                                </div>
-                                <div className="eqip_txt">
-                                    <h3>John Doe</h3>
-                                    <p>VP. Solution Architecture</p>
-                                </div>
-                            </div>
+                            <Swiper
+                                modules={[Navigation, Scrollbar, Pagination]}
+                                grabCursor={true}
+                                spaceBetween={0}
+                                slidesPerView={3}
+                                centeredSlides={true}
+                                initialSlide={1}
+                                navigation
+                                pagination={{ clickable: true }}
+                                scrollbar={{ draggable: true }}
+                                onSwiper={(swiper) => console.log(swiper)}
+                                onSlideChange={() => console.log('slide change')}
+                            >
+                                <SwiperSlide>
+                                    <div className="eqip_otr_bk ">
+                                        <div className="eqip_img">
+                                            {" "}
+                                            <img src={cl1} alt="" />{" "}
+                                        </div>
+                                        <div className="eqip_txt">
+                                            <h3>John Doe</h3>
+                                            <p>VP. Solution Architecture</p>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className="eqip_otr_bk ">
+                                        <div className="eqip_img">
+                                            {" "}
+                                            <img src={cl1} alt="" />{" "}
+                                        </div>
+                                        <div className="eqip_txt">
+                                            <h3>John Doe</h3>
+                                            <p>VP. Solution Architecture</p>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className="eqip_otr_bk ">
+                                        <div className="eqip_img">
+                                            {" "}
+                                            <img src={cl1} alt="" />{" "}
+                                        </div>
+                                        <div className="eqip_txt">
+                                            <h3>John Doe</h3>
+                                            <p>VP. Solution Architecture</p>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className="eqip_otr_bk ">
+                                        <div className="eqip_img">
+                                            {" "}
+                                            <img src={cl1} alt="" />{" "}
+                                        </div>
+                                        <div className="eqip_txt">
+                                            <h3>John Doe</h3>
+                                            <p>VP. Solution Architecture</p>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className="eqip_otr_bk ">
+                                        <div className="eqip_img">
+                                            {" "}
+                                            <img src={cl1} alt="" />{" "}
+                                        </div>
+                                        <div className="eqip_txt">
+                                            <h3>John Doe</h3>
+                                            <p>VP. Solution Architecture</p>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                               
+                            </Swiper>
+                            
                         </div>
                     </div>
                 </div>

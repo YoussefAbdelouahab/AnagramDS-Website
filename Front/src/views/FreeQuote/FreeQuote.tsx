@@ -21,7 +21,9 @@ import trust2 from "../../assets/trust2.jpeg"
 import trust3 from "../../assets/trust3.png"
 import trust4 from "../../assets/trust4.png"
 import trust5 from "../../assets/trust5.jpg"
-import trust6 from "../../assets/trust6.jpg"
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, Autoplay } from 'swiper/modules';
 function FreeQuote() {
 
     return (
@@ -89,59 +91,37 @@ function FreeQuote() {
                 </div>
             </section>
             <section className="trust_us comn_margin">
-                <div className="container">
-                    <div className="trust_inner">
-                        <h6>They trust us</h6>
-                        <div className="trust_logo">
-                            <div className="prtnr_sldr_otr swiper-container">
-                                <div className="swiper-wrapper">
-                                    <div className="swiper-slide">
-                                        <div className="prod_otr_bk ">
-                                            <div className="prd_img">
-                                                {" "}
-                                                <img src={trust1} alt="" />{" "}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <div className="prod_otr_bk ">
-                                            <div className="prd_img">
-                                                {" "}
-                                                <img src={trust2} alt="" />{" "}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <div className="prod_otr_bk ">
-                                            <div className="prd_img">
-                                                {" "}
-                                                <img src={trust3} alt="" />{" "}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <div className="prod_otr_bk ">
-                                            <div className="prd_img">
-                                                {" "}
-                                                <img src={trust4} alt="" />{" "}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <div className="prod_otr_bk ">
-                                            <div className="prd_img">
-                                                {" "}
-                                                <img src={trust5} alt="" />{" "}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div className="container">
+          <div className="trust_inner">
+            <h6>They trust us</h6>
+            <div className="trust_logo">
+              <div className="prtnr_sldr_otr swiper-container">
+                <div className="swiper-wrapper">
+                  <Swiper
+                    modules={[Navigation, Scrollbar, Pagination, Autoplay]}
+                    grabCursor={true}
+                    spaceBetween={0}
+                    slidesPerView={3}
+                    centeredSlides={true}
+                    autoplay={{
+                      delay: 1000,
+                      disableOnInteraction: false,
+                    }}
+                    onSwiper={(swiper) => console.log(swiper)}
+                    onSlideChange={() => console.log('slide change')}
+                  >
+                    <SwiperSlide><a href="/contact"><img src={trust1} alt="" /></a></SwiperSlide>
+                    <SwiperSlide><a href="/contact"><img src={trust2} alt="" /></a></SwiperSlide>
+                    <SwiperSlide><a href="/contact"><img src={trust3} alt="" /></a></SwiperSlide>
+                    <SwiperSlide><a href="/contact"><img src={trust4} alt="" /></a></SwiperSlide>
+                    <SwiperSlide><a href="/contact"><img src={trust5} alt="" /></a></SwiperSlide>
+                  </Swiper>
                 </div>
-            </section>
-
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
             <Footer />
 

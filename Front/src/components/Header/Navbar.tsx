@@ -52,14 +52,17 @@ export default function Navbar() {
                                         <li>
                                             <a href="/help">Assistance</a>
                                         </li>
+                                        <li>
+                                            <a href="/contact">Contact Us</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </nav>
                         </div>
                         <div className="login_contact">
                             <div className="contact">
-                                <a href="/contact" className="redbtn">
-                                    Contact Us
+                                <a href="/login" className="redbtn">
+                                    Connexion
                                 </a>
                             </div>
                         </div>

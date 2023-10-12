@@ -1,0 +1,25 @@
+.eqip_otr_bk {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .eqip_img{
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+    .eqip_txt {
+        width: 71.5%;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+}
+
+.eqp-se {
+    .swiper-button-next, .swiper-button-prev {
+        color: black !important;
+    }
+    .swiper-pagination-bullet {
+        color: #dc2430 !important;
+        background-color: #dc2430 !important;
+      }
+}

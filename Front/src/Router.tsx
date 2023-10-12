@@ -7,6 +7,7 @@ import Help from "./views/Help/Help";
 import Contact from "./views/Contact/Contact";
 import Portal from "./views/Portal/Portal";
 import Login from "./views/Login/Login";
+import Register from "./views/Register/Register";
 export default function Router() {
     return (
         <>
@@ -19,6 +20,7 @@ export default function Router() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/portail" element={<Portal />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
             </Routes>
         </>
     );
