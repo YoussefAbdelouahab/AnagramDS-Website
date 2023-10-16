@@ -19,11 +19,11 @@ export default function Footer() {
                     <div className="container">
                         <div className="footer_top">
                             <div className="comn_hdr white text-center">
-                                <h2>Let's develop your project together</h2>
+                                <h2>Développons votre projet ensemble !</h2>
                             </div>
                             <div className="contact text-center">
                                 <a href="" className="redbtn">
-                                    Contact Us
+                                    Contactez-nous
                                 </a>
                             </div>
                         </div>
@@ -69,41 +69,26 @@ export default function Footer() {
                                         <h3>Navigation</h3>
                                         <ul className="navigation">
                                             <li>
-                                                <a href="a-propos.html">About Us</a>
+                                                <a href="about">À propos</a>
                                             </li>
                                             <li>
-                                                <a href="javascript:void(0);">The society</a>
+                                                <a href="/contact">Contactez-nous</a>
                                             </li>
                                             <li>
-                                                <a href="contact.html">Contact us</a>
+                                                <a href="/jobs">Jobs</a>
                                             </li>
                                             <li>
-                                                <a href="#">Services</a>
+                                                <a href="/help">Assistance</a>
                                             </li>
                                             <li>
-                                                <a href="offers-demploi.html">Jobs</a>
-                                            </li>
-                                            <li>
-                                                <a href="assistance.html">Assistance</a>
-                                            </li>
-                                            <li>
-                                                <a href="">Legal Notice</a>
-                                            </li>
-                                            <li>
-                                                <a href="devis-gratuit.html">Free quote</a>
-                                            </li>
-                                            <li>
-                                                <a href="faq.html">FAQs</a>
-                                            </li>
-                                            <li>
-                                                <a href="projects.html">Our Projects</a>
+                                                <a href="/freequote">Free quote</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div className="col-md-4">
                                     <div className="fmiddle_right">
-                                        <h3>Get In Touch!</h3>
+                                        <h3>Coordonnée</h3>
                                         <ul className="get_in_touch">
                                             <li>
                                                 <a href="javascript:void(0);">
