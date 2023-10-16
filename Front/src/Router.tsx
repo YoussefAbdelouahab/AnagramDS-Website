@@ -8,6 +8,7 @@ import Contact from "./views/Contact/Contact";
 import Portal from "./views/Portal/Portal";
 import Login from "./views/Login/Login";
 import Register from "./views/Register/Register";
+import Blog from "./views/Blog/Blog";
 export default function Router() {
     return (
         <>
@@ -21,6 +22,7 @@ export default function Router() {
                 <Route path="/portail" element={<Portal />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
+                <Route path="/blog" element={<Blog />} />
             </Routes>
         </>
     );
