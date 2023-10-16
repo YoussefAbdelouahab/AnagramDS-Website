@@ -92,8 +92,8 @@ function Home() {
             Étude de Besoins en ligne. Réponse en 24H.
           </p>
           <div className="banner_button">
-            <a href="" className="redbtn">
-              Services
+            <a href="/freequote" className="redbtn">
+              Devis gratuit
             </a>
           </div>
         </div>
@@ -268,8 +268,8 @@ function Home() {
                     <p>Nos offres sont basées sur 3 points fondamentaux.</p>
                   </div>
                   <div className="contact">
-                    <a href="" className="redbtn">
-                      Learn More
+                    <a href="/about" className="redbtn">
+                      En savoir plus
                     </a>
                   </div>
                 </div>
@@ -326,8 +326,8 @@ function Home() {
               <img src={strategy} alt="" />
             </div>
             <div className="comn_hdr green text-center">
-              <span>STRATEGY</span>
-              <h2>Our principles</h2>
+              <span>Stratégie</span>
+              <h2>Nos principes</h2>
             </div>
             <div className="strategy_content">
               <div className="strategy_main_img text-center">
@@ -448,7 +448,7 @@ function Home() {
             </div>
             <div className="comn_hdr green text-center">
               <span>Testimonials</span>
-              <h2>What are our customers saying?</h2>
+              <h2>Que penses nos clients ?</h2>
             </div>
           </div>
           <div className="testi-wrap">
@@ -662,7 +662,7 @@ function Home() {
             </div>
             <div className="see_pro">
               <a href="javascript:void(0);" className="redbtn">
-                SEE OTHER PROJECTS
+                Voir plus de projets
               </a>
             </div>
           </div>
@@ -672,7 +672,7 @@ function Home() {
       <section className="trust_us comn_margin">
         <div className="container">
           <div className="trust_inner">
-            <h6>They trust us</h6>
+            <h6>Ils nous font confiance</h6>
             <div className="trust_logo">
               <div className="prtnr_sldr_otr swiper-container">
                 <div className="swiper-wrapper">

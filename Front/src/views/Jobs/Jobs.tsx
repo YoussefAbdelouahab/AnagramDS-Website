@@ -31,8 +31,8 @@ function Jobs() {
                         <div className="brd-font">
                             <ul className="breadcrumb secondary-color">
                                 <li className="breadcrumb-item">
-                                    <a className="white-text" href="#">
-                                        HOME{" "}
+                                    <a className="white-text" href="/">
+                                        Accueil{" "}
                                     </a>
                                 </li>
                                 <li className="breadcrumb-item active"> OFFRES D’EMPLOI </li>
@@ -56,10 +56,10 @@ function Jobs() {
                                     placeholder="Mots-clés"
                                     defaultValue=""
                                 />
-                                <input type="submit" defaultValue="" />
+                                <input type="send" defaultValue="" />
                             </div>
                             <div className="select_bx_outr">
-                                <label>Court par :</label>
+                                <label>Trié par :</label>
                                 <select>
                                     <option>le plus récent</option>
                                     <option>le plus récent</option>

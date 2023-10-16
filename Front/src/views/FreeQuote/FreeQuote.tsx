@@ -44,8 +44,8 @@ function FreeQuote() {
                         <div className="brd-font">
                             <ul className="breadcrumb secondary-color">
                                 <li className="breadcrumb-item">
-                                    <a className="white-text" href="#">
-                                        HOME{" "}
+                                    <a className="white-text" href="/">
+                                        Accueil{" "}
                                     </a>
                                 </li>
                                 <li className="breadcrumb-item active"> Devis </li>
@@ -93,7 +93,7 @@ function FreeQuote() {
             <section className="trust_us comn_margin">
         <div className="container">
           <div className="trust_inner">
-            <h6>They trust us</h6>
+            <h6>Ils nous font confiance</h6>
             <div className="trust_logo">
               <div className="prtnr_sldr_otr swiper-container">
                 <div className="swiper-wrapper">

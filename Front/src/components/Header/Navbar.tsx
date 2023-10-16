@@ -38,13 +38,10 @@ export default function Navbar() {
                                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                                     <ul className="navbar-nav custom_nav">
                                         <li>
-                                            <a href="#">Services</a>
+                                            <a href="/about">À propos</a>
                                         </li>
                                         <li>
-                                            <a href="/about">About Us</a>
-                                        </li>
-                                        <li>
-                                            <a href="/freequote">Free Quote</a>
+                                            <a href="/freequote">Devis gratuit</a>
                                         </li>
                                         <li>
                                             <a href="/jobs">Jobs</a>
@@ -53,7 +50,7 @@ export default function Navbar() {
                                             <a href="/help">Assistance</a>
                                         </li>
                                         <li>
-                                            <a href="/contact">Contact Us</a>
+                                            <a href="/contact">Contactez-nous</a>
                                         </li>
                                     </ul>
                                 </div>
