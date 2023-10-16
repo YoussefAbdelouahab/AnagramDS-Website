@@ -36,7 +36,7 @@ router.post('/register', Register)
 router.post('/login', Login)
 
 /* Blog Routes */
-router.get('/blog', CheckAuth, getAllArticle)
+router.get('/blog', getAllArticle)
 
 router.post('/blog', upload.array('url',1), addArticle)
 
