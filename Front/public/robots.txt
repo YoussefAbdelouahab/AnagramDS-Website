@@ -1,3 +1,25 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /*.css$
+Allow: /*.css?
+Allow: /*.js$
+Allow: /*.js?
+Allow: /*.gif
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.png
+Allow: /*.svg
+
+
+User-agent: *
+Disallow: /core/
+Disallow: /mention
+
+Disallow: /web.config
+Disallow: *.pdf
+
+Disallow: /admin/
+
+Sitemap: https://anagramds.com/sitemap.xml
+
+User-agent: bingbot
+Crawl-delay: 10
