@@ -85,11 +85,11 @@ function Home() {
         </div>
         <div className="banner_content">
           <div className="banner_heading">
-            <h1>Relevons Vos Challenge.</h1>
+            <h1>Relevons vos challenges.</h1>
           </div>
           <p>
-            Bénéficiez de nos Compétences et de notre Réseaux d'experts. Essayez notre
-            Étude de Besoins en ligne. Réponse en 24H.
+            Bénéficiez de nos compétences et de notre réseaux d'experts. Essayez notre
+            étude de besoins en ligne. Réponse en 24H.
           </p>
           <div className="banner_button">
             <a href="/freequote" className="redbtn">
@@ -650,16 +650,7 @@ function Home() {
               </div>
             </div>
             {/* Add Arrows */}
-            <div id="prev1" className="swiper-button-next mngmnt_right mngmnt">
-              <div>
-                <i className="fa fa-long-arrow-right" aria-hidden="true" />
-              </div>
-            </div>
-            <div id="next1" className="swiper-button-prev mngmnt_left mngmnt">
-              <div>
-                <i className="fa fa-long-arrow-left" aria-hidden="true" />
-              </div>
-            </div>
+
             <div className="see_pro">
               <a href="javascript:void(0);" className="redbtn">
                 Voir plus de projets

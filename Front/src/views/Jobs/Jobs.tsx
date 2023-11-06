@@ -266,7 +266,7 @@ function Jobs() {
                             </div>
                         </div>
                         <div className="text-center mt-5">
-                            <a href="" className="redbtn blk-btn">
+                            <a href="" className="redbtn blk-btn job_btn">
                                 Découvrez plus de projets
                             </a>
                         </div>
